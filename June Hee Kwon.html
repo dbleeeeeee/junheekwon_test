@@ -1,0 +1,376 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>June Hee Kwon</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500&family=Noto+Sans+KR:wght@300;400;500;700&family=Noto+Serif+KR:wght@400;600&display=swap">
+<style>
+/* Layout: a narrow left "spine" of section labels that reads like a field-notebook margin; content column to the right; one wide hero band. */
+:root{
+  --bg:#f2f3ef;          /* cool stone paper */
+  --bg-2:#e7e9e2;        /* deeper stone for bands */
+  --fg:#172028;          /* ink */
+  --fg-2:#4b5660;        /* muted ink */
+  --line:#c9cdc4;
+  --accent:#d9661f;      /* Jeju tangerine */
+  --accent-ink:#9a4110;
+  --card:#fbfbf9;
+  --display:"Fraunces","Noto Serif KR","Times New Roman",serif;
+  --body:"Noto Sans KR","Helvetica Neue",Arial,sans-serif;
+  --kr-serif:"Noto Serif KR","Fraunces",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#13181d;--bg-2:#1b2128;--fg:#ebe9e2;--fg-2:#a7aeb4;--line:#323a42;
+    --accent:#f08a45;--accent-ink:#ffb27d;--card:#1b2128;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13181d;--bg-2:#1b2128;--fg:#ebe9e2;--fg-2:#a7aeb4;--line:#323a42;
+  --accent:#f08a45;--accent-ink:#ffb27d;--card:#1b2128;color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.1;margin:0;text-wrap:balance}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-family:var(--display);font-size:19px;font-weight:500;text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.brand small{font-family:var(--kr-serif);font-size:13px;color:var(--fg-2);margin-left:8px;font-weight:400}
+.links{display:flex;gap:22px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.links a{text-decoration:none;color:var(--fg-2)}
+.links a:hover{color:var(--accent-ink)}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:12px;letter-spacing:.08em}
+.lang button{background:none;border:0;color:var(--fg-2);padding:6px 12px;cursor:pointer;font-family:var(--body)}
+.lang button[aria-pressed="true"]{background:var(--fg);color:var(--bg)}
+@media (max-width:760px){.links{display:none}}
+
+/* hero */
+.hero{padding-block:72px 64px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:48px;align-items:end}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent-ink);display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+.hero h1{font-size:clamp(44px,7.5vw,88px);font-weight:300;letter-spacing:-.025em;margin-top:18px;font-variation-settings:"opsz" 144}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--accent-ink)}
+.hero .kr{font-family:var(--kr-serif);font-size:clamp(20px,2.6vw,28px);color:var(--fg-2);margin-top:10px;font-weight:400}
+.hero .lede{max-width:34em;margin-top:28px;font-size:18px;line-height:1.6;color:var(--fg-2);font-weight:300}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:999px;text-decoration:none;font-size:14px;letter-spacing:.02em;border:1px solid var(--fg);transition:transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn.solid{background:var(--fg);color:var(--bg)}
+.btn.ghost{color:var(--fg)}
+.facts{display:grid;gap:14px;border-left:1px solid var(--line);padding-left:24px;font-size:14px}
+.facts div{display:grid;gap:2px}
+.facts dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-2)}
+.facts dd{margin:0;font-weight:500}
+.map{position:absolute;right:-60px;bottom:-40px;width:520px;max-width:70vw;opacity:.9;pointer-events:none}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.map{width:360px;opacity:.5}}
+
+/* sections */
+.section{padding-block:72px;border-bottom:1px solid var(--line)}
+.section .wrap{display:grid;grid-template-columns:220px minmax(0,1fr);gap:40px}
+.spine{position:sticky;top:calc(72px + env(safe-area-inset-top,0px));align-self:start}
+.spine .num{font-family:var(--display);font-size:13px;color:var(--accent-ink);letter-spacing:.1em}
+.spine h2{font-size:28px;margin-top:6px;letter-spacing:-.01em}
+.spine .kr{font-family:var(--kr-serif);color:var(--fg-2);font-size:14px;margin-top:4px}
+.content{min-width:0;max-width:720px}
+.prose p+p{margin-top:1.1em}
+.prose{font-size:17px;line-height:1.7;font-weight:300}
+.prose strong{font-weight:500}
+@media (max-width:860px){.section .wrap{grid-template-columns:1fr;gap:24px}.spine{position:static}}
+
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.tag{font-size:12.5px;padding:6px 12px;border:1px solid var(--line);border-radius:999px;color:var(--fg-2);letter-spacing:.02em}
+
+/* research books */
+.books{display:grid;gap:28px}
+.book{display:grid;grid-template-columns:150px minmax(0,1fr);gap:28px;padding:28px;background:var(--card);border:1px solid var(--line)}
+.cover{aspect-ratio:2/3;max-width:100%;background:var(--fg);color:var(--bg);display:flex;flex-direction:column;justify-content:space-between;padding:16px 14px;font-family:var(--display)}
+.cover.next{background:var(--accent);color:#fff}
+.cover .t{font-size:17px;line-height:1.15;font-weight:500}
+.cover .s{font-size:10.5px;opacity:.75;font-family:var(--body);letter-spacing:.06em;text-transform:uppercase}
+.book h3{font-size:26px;letter-spacing:-.01em}
+.book .meta{font-size:13px;color:var(--fg-2);margin-top:6px;letter-spacing:.02em}
+.book p{margin-top:14px;font-size:15.5px;line-height:1.65;color:var(--fg-2)}
+.award{display:inline-flex;align-items:center;gap:8px;margin-top:16px;font-size:13px;color:var(--accent-ink);font-weight:500}
+.award::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent)}
+.lenses{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+.lens{font-family:var(--display);font-style:italic;font-size:15px;padding:4px 0;border-bottom:1px solid var(--accent)}
+.book .links2{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;font-size:13px}
+.book .links2 a{color:var(--fg);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+@media (max-width:600px){.book{grid-template-columns:1fr}.cover{width:130px}}
+
+/* publications */
+.pubgroup+.pubgroup{margin-top:40px}
+.pubgroup h3{font-size:13px;letter-spacing:.14em;text-transform:uppercase;font-family:var(--body);font-weight:500;color:var(--fg-2);padding-bottom:10px;border-bottom:1px solid var(--fg)}
+.pub{display:grid;grid-template-columns:56px minmax(0,1fr);gap:16px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.pub .y{font-family:var(--display);font-variant-numeric:tabular-nums;color:var(--accent-ink);font-size:15px}
+.pub .title{font-weight:500}
+.pub .where{color:var(--fg-2);font-size:14px;margin-top:2px}
+.pub .note{font-size:13px;color:var(--accent-ink);margin-top:4px}
+
+/* courses */
+.courses{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.course{background:var(--bg);padding:20px 18px;display:grid;gap:6px;min-width:0}
+.course .code{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-ink)}
+.course .name{font-family:var(--display);font-size:19px;line-height:1.2}
+.course .kr{font-size:13px;color:var(--fg-2)}
+.hours{margin-top:24px;font-size:14px;color:var(--fg-2)}
+
+/* timeline */
+.tl{display:grid;gap:0}
+.ev{display:grid;grid-template-columns:110px minmax(0,1fr);gap:20px;padding:18px 0;border-bottom:1px solid var(--line)}
+.ev .d{font-family:var(--display);font-size:15px;color:var(--accent-ink);font-variant-numeric:tabular-nums}
+.ev .h{font-weight:500}
+.ev .s{color:var(--fg-2);font-size:14px;margin-top:2px}
+@media (max-width:480px){.ev{grid-template-columns:1fr;gap:4px}}
+
+/* contact */
+.contact .content{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;max-width:none}
+.cblock dt{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--fg-2)}
+.cblock dd{margin:4px 0 0;font-size:17px;font-family:var(--display)}
+.copy{display:inline-flex;align-items:center;gap:8px}
+.copy button{font-family:var(--body);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--line);background:none;color:var(--fg-2);border-radius:999px;padding:3px 10px;cursor:pointer}
+.assoc{margin-top:8px;display:grid;gap:4px;font-size:15px}
+
+footer{padding-block:28px 40px;font-size:12.5px;color:var(--fg-2)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+[data-ko]{}
+html[lang="ko"] .en{display:none}
+html[lang="en"] .ko{display:none}
+@media (prefers-reduced-motion:reduce){.btn{transition:none}}
+</style>
+
+<nav class="nav" aria-label="Site">
+  <div class="wrap">
+    <a class="brand" href="#top">June Hee Kwon <small>권준희</small></a>
+    <div class="links">
+      <a href="#about"><span class="en">About</span><span class="ko">소개</span></a>
+      <a href="#research"><span class="en">Research</span><span class="ko">연구</span></a>
+      <a href="#publications"><span class="en">Publications</span><span class="ko">저서·논문</span></a>
+      <a href="#teaching"><span class="en">Teaching</span><span class="ko">강의</span></a>
+      <a href="#news"><span class="en">News</span><span class="ko">소식</span></a>
+      <a href="#contact"><span class="en">Contact</span><span class="ko">연락처</span></a>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-en" type="button" aria-pressed="true">EN</button>
+      <button id="lang-ko" type="button" aria-pressed="false">한국어</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <svg class="map" viewBox="0 0 520 360" aria-hidden="true" fill="none" stroke="var(--line)" stroke-width="1">
+    <!-- abstract field map: Yanbian / Seoul / Jeju / Osaka as waypoints -->
+    <path d="M40 300 C120 240 180 260 230 200 S330 120 400 90 S470 60 500 40" stroke-dasharray="3 6"/>
+    <path d="M60 330 C140 320 200 290 260 300 S360 330 440 290" stroke-dasharray="3 6"/>
+    <circle cx="400" cy="90" r="4" fill="var(--accent)" stroke="none"/><text x="412" y="86" font-size="11" fill="var(--fg-2)" font-family="Fraunces,serif" font-style="italic">Yanbian</text>
+    <circle cx="300" cy="190" r="4" fill="var(--accent)" stroke="none"/><text x="312" y="186" font-size="11" fill="var(--fg-2)" font-family="Fraunces,serif" font-style="italic">Seoul</text>
+    <circle cx="260" cy="300" r="4" fill="var(--accent)" stroke="none"/><text x="272" y="296" font-size="11" fill="var(--fg-2)" font-family="Fraunces,serif" font-style="italic">Jeju</text>
+    <circle cx="440" cy="290" r="4" fill="var(--accent)" stroke="none"/><text x="452" y="286" font-size="11" fill="var(--fg-2)" font-family="Fraunces,serif" font-style="italic">Osaka</text>
+  </svg>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow"><span class="en">Cultural anthropologist · Asian Studies, Sacramento State</span><span class="ko">문화인류학자 · 새크라멘토 주립대 아시아학 프로그램</span></div>
+      <h1>June Hee <em>Kwon</em></h1>
+      <div class="kr">권준희 · 문화인류학 부교수</div>
+      <p class="lede">
+        <span class="en">Borderlands, diaspora, and the political economy of East Asia. Author of <em>Borderland Dreams</em>, winner of the 2024 Francis L.K. Hsu Book Prize.</span>
+        <span class="ko">경계지대, 디아스포라, 그리고 동아시아의 정치경제를 연구합니다. 2024년 프랜시스 L.K. 쉬 도서상 수상작 <em>Borderland Dreams</em>(한국어판 『이주, 경계, 꿈』)의 저자입니다.</span>
+      </p>
+      <div class="cta">
+        <a class="btn solid" href="#research"><span class="en">Read about the research</span><span class="ko">연구 보기</span></a>
+        <a class="btn ghost" href="https://www.dukeupress.edu/borderland-dreams"><span class="en">Borderland Dreams at Duke University Press ↗</span><span class="ko">Duke University Press에서 책 보기 ↗</span></a>
+      </div>
+    </div>
+    <dl class="facts">
+      <div><dt><span class="en">Position</span><span class="ko">직위</span></dt><dd><span class="en">Associate Professor of Cultural Anthropology</span><span class="ko">문화인류학 부교수</span></dd></div>
+      <div><dt><span class="en">Program</span><span class="ko">소속</span></dt><dd><span class="en">Asian Studies, California State University, Sacramento</span><span class="ko">캘리포니아 주립대학교 새크라멘토 아시아학 프로그램</span></dd></div>
+      <div><dt>Ph.D.</dt><dd><span class="en">Cultural Anthropology, Duke University</span><span class="ko">듀크대학교 문화인류학</span></dd></div>
+      <div><dt><span class="en">Fieldsites</span><span class="ko">현지조사</span></dt><dd>Seoul · Yanbian · Jeju · Osaka</dd></div>
+    </dl>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="spine"><div class="num">I</div><h2><span class="en">About</span><span class="ko">소개</span></h2><div class="kr"><span class="en">약력</span><span class="ko">Biography</span></div></div>
+    <div class="content prose">
+      <div class="en">
+        <p>June Hee Kwon is Associate Professor of Cultural Anthropology in the Asian Studies Program at California State University, Sacramento. Her research and teaching focus on Korean diaspora and transnational migration, borderlands and political ecology, materiality and affect, gendered labor and class formation, and the lived experiences of human suffering and memory.</p>
+        <p>Her expertise spans contemporary Korea (North and South), China, and Japan, with particular attention to postcolonial and post–Cold War cultures and political economies across East Asia.</p>
+        <p>She received her Ph.D. in Cultural Anthropology from Duke University. Before joining Sacramento State, she was Assistant Professor/Faculty Fellow in the Department of East Asian Studies at New York University and a Postdoctoral Fellow at the University of Pittsburgh. In 2023–24 she was a Fellow at the Centre for Advanced Study Sofia.</p>
+      </div>
+      <div class="ko">
+        <p>권준희는 캘리포니아 주립대학교 새크라멘토(Sacramento State) 아시아학 프로그램의 문화인류학 부교수입니다. 한인 디아스포라와 초국적 이주, 경계지대와 정치생태학, 물질성과 정동, 젠더화된 노동과 계급 형성, 그리고 고통과 기억의 삶의 경험을 연구하고 가르칩니다.</p>
+        <p>연구 지역은 남북한, 중국, 일본을 아우르며, 동아시아의 탈식민·탈냉전 문화와 정치경제에 주목합니다.</p>
+        <p>듀크대학교에서 문화인류학 박사학위를 받았고, 새크라멘토 주립대 부임 전 뉴욕대학교(NYU) 동아시아학과 조교수/패컬티 펠로우, 피츠버그대학교 박사후연구원을 지냈습니다. 2023–24년에는 소피아 고등연구소(CAS Sofia) 펠로우로 활동했습니다.</p>
+      </div>
+      <div class="tags">
+        <span class="tag">Korean diaspora</span><span class="tag">Transnational migration</span><span class="tag">Borderlands</span><span class="tag">Political ecology</span><span class="tag">Materiality &amp; affect</span><span class="tag">Gendered labor</span><span class="tag">Class formation</span><span class="tag">Memory &amp; suffering</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="research">
+  <div class="wrap">
+    <div class="spine"><div class="num">II</div><h2><span class="en">Research</span><span class="ko">연구</span></h2><div class="kr"><span class="en">두 권의 경계지대 민족지</span><span class="ko">Two borderland ethnographies</span></div></div>
+    <div class="content books">
+      <article class="book">
+        <div class="cover"><div class="s">Duke University Press · 2023</div><div class="t">Borderland Dreams</div><div class="s">Hsu Book Prize 2024</div></div>
+        <div>
+          <h3>Borderland Dreams</h3>
+          <div class="meta"><span class="en">The Transnational Lives of Korean Chinese Workers · Duke University Press, 2023 · Korean edition 『이주, 경계, 꿈』 (생각의힘, 2025)</span><span class="ko">The Transnational Lives of Korean Chinese Workers · Duke University Press, 2023 · 한국어판 『이주, 경계, 꿈: 조선족 이주자의 떠남과 머뭄, 교차하는 열망에 관하여』 (고미연 옮김, 생각의힘, 2025)</span></div>
+          <p class="en">A borderland ethnography of how the "Korean dream" has been reimagined and pursued in Yanbian, the Korean Chinese Autonomous Prefecture, since the early 1990s. Built on more than a decade of multi-sited fieldwork in Seoul and Yanbian, the book follows the remittance-driven realities of labor migration shaped by the "Korean Wind" and shows how Korean Chinese workers were constituted as a transnational ethnic working class, suspended between a waxing Chinese dream and a waning Korean dream.</p>
+          <p class="ko">1990년대 초부터 연변 조선족자치주를 사로잡은 "코리안 드림"이 어떻게 재해석되고 추구되었는지를 추적하는 경계지대 민족지입니다. 서울과 연변에서 10년 넘게 진행한 다현장 현지조사를 바탕으로, "한국 바람"이 만든 송금 중심의 이주 현실을 따라가며 조선족 노동자들이 초국적 종족 노동계급으로 구성되는 과정을 분석합니다. 부상하는 차이나 드림과 저물어가는 코리안 드림 사이에 놓인 이주자들의 열망을 담았습니다.</p>
+          <div class="lenses"><span class="lens">bodies</span><span class="lens">money</span><span class="lens">time</span></div>
+          <div class="award"><span class="en">2024 Francis L.K. Hsu Book Prize, Society for East Asian Anthropology (AAA)</span><span class="ko">2024 프랜시스 L.K. 쉬 도서상 · 미국인류학회 동아시아인류학회</span></div>
+          <div class="links2">
+            <a href="https://www.dukeupress.edu/borderland-dreams">Duke University Press</a>
+            <a href="https://newbooksnetwork.com/borderland-dreams">New Books Network interview</a>
+            <a href="https://www.hani.co.kr/arti/culture/book/1214573.html">한겨레 서평</a>
+            <a href="https://www.khan.co.kr/article/202508212111055">경향신문 서평</a>
+          </div>
+        </div>
+      </article>
+      <article class="book">
+        <div class="cover next"><div class="s"><span class="en">In progress</span><span class="ko">집필 중</span></div><div class="t">Citrus Island</div><div class="s">Jeju · Osaka</div></div>
+        <div>
+          <h3>Citrus Island</h3>
+          <div class="meta"><span class="en">The Politics of Fruit Farming in Jeju Korea · second book project</span><span class="ko">제주 감귤 농업의 정치 · 두 번째 저서 프로젝트</span></div>
+          <p class="en">A social history of the citrus trees sent to Jeju Island by diasporic Koreans in Japan between the 1960s and 1980s. Citrus cultivation remade Jeju's agrarian economy and ecology even as the island was being turned into a model tourist destination. Drawing on archival and ethnographic research in Jeju and Osaka, the project reads citrus trees as gifts, as commodities, and as state projects, and asks how Jeju has both controlled and been controlled by nature in imagining its future.</p>
+          <p class="ko">1960–80년대 재일동포가 제주도로 보낸 감귤나무의 사회사를 다룹니다. 감귤 재배는 제주의 농업경제와 생태를 뒤바꾸었고, 같은 시기 제주는 모범 관광지로 재편되었습니다. 제주와 오사카에서의 문헌·현지조사를 바탕으로 감귤나무를 선물, 상품, 국가 프로젝트라는 세 층위에서 읽으며, 제주가 미래를 상상하는 과정에서 자연을 통제하고 또 자연에 의해 통제되어 온 방식을 조명합니다.</p>
+          <div class="lenses"><span class="lens">gifts</span><span class="lens">commodities</span><span class="lens">state projects</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="publications">
+  <div class="wrap">
+    <div class="spine"><div class="num">III</div><h2><span class="en">Publications</span><span class="ko">저서 · 논문</span></h2><div class="kr"><span class="en">선별 목록</span><span class="ko">Selected works</span></div></div>
+    <div class="content">
+      <div class="pubgroup">
+        <h3><span class="en">Books</span><span class="ko">저서</span></h3>
+        <div class="pub"><div class="y">2025</div><div><div class="title">『이주, 경계, 꿈: 조선족 이주자의 떠남과 머뭄, 교차하는 열망에 관하여』</div><div class="where">권준희 지음, 고미연 옮김 · 생각의힘</div></div></div>
+        <div class="pub"><div class="y">2023</div><div><div class="title">Borderland Dreams: The Transnational Lives of Korean Chinese Workers</div><div class="where">Duke University Press</div><div class="note">Winner, 2024 Francis L.K. Hsu Book Prize, Society for East Asian Anthropology</div></div></div>
+      </div>
+      <div class="pubgroup">
+        <h3><span class="en">Articles &amp; chapters</span><span class="ko">논문 · 챕터</span></h3>
+        <div class="pub"><div class="y">2023</div><div><div class="title">"Just Waiting: Korean Chinese Mobility and Immobility"</div><div class="where">In <em>In the Meantime: Toward an Anthropology of the Possible</em>, ed. Deborah Durham and Adeline Masquelier · Berghahn Books</div></div></div>
+        <div class="pub"><div class="y">2021</div><div><div class="title">"알리기 위한 지역학, 알고 싶은 지역학: 미국 내 한국학 수업풍경과 연구동향"</div><div class="where"><em>역사비평</em> (Critical Review of History) 137</div></div></div>
+        <div class="pub"><div class="y">2019</div><div><div class="title">"Forbidden Homeland: Divided Belonging on the China–Korea Border"</div><div class="where"><em>Critique of Anthropology</em> 39(1)</div></div></div>
+        <div class="pub"><div class="y">2019</div><div><div class="title">"Rhythms of 'Free' Movement: Korean Chinese Migrants Under South Korea's Visa Regime"</div><div class="where"><em>Journal of Ethnic and Migration Studies</em> 45(15)</div></div></div>
+        <div class="pub"><div class="y">2015</div><div><div class="title">"The Work of Waiting: Love and Money in Korean Chinese Transnational Migration"</div><div class="where"><em>Cultural Anthropology</em> 30(3)</div><div class="note">Honorable Mention, 2016 Cultural Horizons Prize, Society for Cultural Anthropology</div></div></div>
+        <div class="pub"><div class="y">2002</div><div><div class="title">"Nationalism of Divided Korea and the Ethnic Identity of Koreans in Japan"</div><div class="where"><em>Research of Korea and Japan Ethnic Problems</em> 3 (in Korean): 185–218</div></div></div>
+      </div>
+      <div class="pubgroup">
+        <h3><span class="en">Book reviews</span><span class="ko">서평</span></h3>
+        <div class="pub"><div class="y">2024</div><div><div class="title"><em>Making Peace with Nature: Ecological Encounters Along the Korean DMZ</em></div><div class="where">Korean Studies</div></div></div>
+        <div class="pub"><div class="y">2022</div><div><div class="title"><em>Sovereignty Experiments: Korean Migrants and the Building of Borders in Northeast Asia, 1860–1945</em></div><div class="where">Korean Studies 46</div></div></div>
+        <div class="pub"><div class="y">2020</div><div><div class="title"><em>Between Foreign and Family: Return Migration and Identity Construction Among Korean Americans and Korean Chinese</em></div><div class="where">Journal of Asian Studies 79(2)</div></div></div>
+        <div class="pub"><div class="y">2016</div><div><div class="title"><em>Living on Our Own: Single Women, Rental Housing, and Post-Revolutionary Affect in Contemporary South Korea</em></div><div class="where">Journal of the Royal Anthropological Institute 22</div></div></div>
+        <div class="pub"><div class="y">2014</div><div><div class="title"><em>Representing the Invisible: The American Perceptions of Colonial Korea (1910–1945)</em></div><div class="where">Dissertation Reviews</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="teaching">
+  <div class="wrap">
+    <div class="spine"><div class="num">IV</div><h2><span class="en">Teaching</span><span class="ko">강의</span></h2><div class="kr"><span class="en">아시아학 프로그램 개설 과목</span><span class="ko">Courses in Asian Studies</span></div></div>
+    <div class="content">
+      <div class="courses">
+        <div class="course"><div class="code">ASIA 1</div><div class="name">Asia in the World</div><div class="kr">세계 속의 아시아</div></div>
+        <div class="course"><div class="code">ASIA 111</div><div class="name">Asian Migration and Diaspora</div><div class="kr">아시아의 이주와 디아스포라</div></div>
+        <div class="course"><div class="code">ASIA 135</div><div class="name">Korean Culture</div><div class="kr">한국 문화</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Korean History</div><div class="kr">한국사</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Culture and Society of North Korea</div><div class="kr">북한의 문화와 사회</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Modernity and Globalization in Asia</div><div class="kr">아시아의 근대성과 세계화</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Global East Asia, Global Capitalism</div><div class="kr">글로벌 동아시아, 글로벌 자본주의</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Political Economy of East Asia</div><div class="kr">동아시아 정치경제</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Wealth and Poverty in East Asia</div><div class="kr">동아시아의 부와 빈곤</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Human Rights and Humanitarianism in East Asia</div><div class="kr">동아시아의 인권과 인도주의</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">US–China Relations</div><div class="kr">미중 관계</div></div>
+        <div class="course"><div class="code">ASIA</div><div class="name">Money, Sex, and Power</div><div class="kr">돈, 섹스, 권력</div></div>
+      </div>
+      <p class="hours"><span class="en">Office hours: Tuesday and Thursday, 4:30–6:00 PM, Amador Hall 460.</span><span class="ko">면담 시간: 화·목 오후 4:30–6:00, Amador Hall 460호.</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="news">
+  <div class="wrap">
+    <div class="spine"><div class="num">V</div><h2><span class="en">News</span><span class="ko">소식</span></h2><div class="kr"><span class="en">최근 활동</span><span class="ko">Recent activity</span></div></div>
+    <div class="content tl">
+      <div class="ev"><div class="d">2026 · Jun</div><div><div class="h"><span class="en">Book talk, UCLA Center for Korean Studies</span><span class="ko">UCLA 한국학센터 북토크</span></div><div class="s"><span class="en"><em>Borderland Dreams</em>, part of the "Koreans in the World" series supported by the Academy of Korean Studies.</span><span class="ko">한국학중앙연구원 후원 "Koreans in the World" 시리즈에서 『Borderland Dreams』 강연.</span></div></div></div>
+      <div class="ev"><div class="d">2025 · Aug</div><div><div class="h"><span class="en">Korean edition published</span><span class="ko">한국어판 출간</span></div><div class="s"><span class="en">『이주, 경계, 꿈』 (생각의힘), reviewed in Hankyoreh and Kyunghyang Shinmun.</span><span class="ko">『이주, 경계, 꿈』(생각의힘) 출간. 한겨레·경향신문 서평 게재.</span></div></div></div>
+      <div class="ev"><div class="d">2024 · Nov</div><div><div class="h"><span class="en">Francis L.K. Hsu Book Prize</span><span class="ko">프랜시스 L.K. 쉬 도서상 수상</span></div><div class="s"><span class="en">Awarded by the Society for East Asian Anthropology at the AAA annual meeting in Tampa.</span><span class="ko">탬파에서 열린 미국인류학회 연례회의에서 동아시아인류학회가 수여.</span></div></div></div>
+      <div class="ev"><div class="d">2023 · Nov</div><div><div class="h"><span class="en"><em>Borderland Dreams</em> published by Duke University Press</span><span class="ko">Duke University Press에서 『Borderland Dreams』 출간</span></div><div class="s"><span class="en">Fellow, Centre for Advanced Study Sofia, 2023–24.</span><span class="ko">같은 해 소피아 고등연구소(CAS Sofia) 펠로우 선정(2023–24).</span></div></div></div>
+      <div class="ev"><div class="d">2019 · Aug</div><div><div class="h"><span class="en">Joined Sacramento State</span><span class="ko">새크라멘토 주립대 부임</span></div><div class="s"><span class="en">Asian Studies Program, College of Social Sciences and Interdisciplinary Studies.</span><span class="ko">사회과학·학제간연구대학 아시아학 프로그램.</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="spine"><div class="num">VI</div><h2><span class="en">Contact</span><span class="ko">연락처</span></h2><div class="kr"><span class="en">연구실 · 소속 학회</span><span class="ko">Office &amp; affiliations</span></div></div>
+    <div class="content">
+      <dl class="cblock">
+        <dt>Email</dt>
+        <dd class="copy"><span id="email">junehee.kwon@csus.edu</span><button type="button" id="copy-email">Copy</button></dd>
+      </dl>
+      <dl class="cblock">
+        <dt><span class="en">Office</span><span class="ko">연구실</span></dt>
+        <dd>Amador Hall 460<br>916.278.7337</dd>
+      </dl>
+      <dl class="cblock">
+        <dt><span class="en">Mail</span><span class="ko">우편</span></dt>
+        <dd>Asian Studies Program<br>California State University, Sacramento<br>6000 J Street, Sacramento, CA 95819</dd>
+      </dl>
+      <dl class="cblock">
+        <dt><span class="en">Professional associations</span><span class="ko">소속 학회</span></dt>
+        <dd class="assoc" style="font-family:var(--body);font-size:15px">
+          <span>American Anthropological Association</span>
+          <span>Association for Asian Studies</span>
+          <span>Association for Asian American Studies</span>
+        </dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 June Hee Kwon · California State University, Sacramento</span>
+    <span><a href="https://www.csus.edu/faculty/k/junehee.kwon/" style="color:inherit">csus.edu faculty page</a> · <a href="https://scholars.csus.edu/esploro/profile/june_hee_kwon" style="color:inherit">Scholars@CSUS</a> · <a href="https://csus.academia.edu/JuneHeeKwon" style="color:inherit">Academia.edu</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement;
+  var en=document.getElementById('lang-en'),ko=document.getElementById('lang-ko');
+  function setLang(l){root.setAttribute('lang',l);en.setAttribute('aria-pressed',l==='en');ko.setAttribute('aria-pressed',l==='ko');try{localStorage.setItem('jhk-lang',l)}catch(e){}}
+  var saved='en';try{saved=localStorage.getItem('jhk-lang')||'en'}catch(e){}
+  setLang(saved);
+  en.addEventListener('click',function(){setLang('en')});
+  ko.addEventListener('click',function(){setLang('ko')});
+  var cb=document.getElementById('copy-email');
+  cb.addEventListener('click',function(){
+    var t=document.getElementById('email').textContent;
+    var done=function(){cb.textContent='Copied';setTimeout(function(){cb.textContent='Copy'},1500)};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(t).then(done).catch(function(){sel()})}else{sel()}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('email'));var s=getSelection();s.removeAllRanges();s.addRange(r)}
+  });
+})();
+</script>
+
+</body></html>
